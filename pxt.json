@@ -5,11 +5,8 @@
         "device": "*"
     },
     "files": [
-        "main.blocks",
         "main.ts",
-        "README.md",
-        "assets.json",
-        "enemy-movement.ts"
+        "README.md"
     ],
     "testFiles": [
         "test.ts"
