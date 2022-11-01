@@ -1,6 +1,6 @@
 {
     "name": "pxt-enemy-movement",
-    "description": "",
+    "version": "0.2.0",
     "dependencies": {
         "device": "*"
     },
