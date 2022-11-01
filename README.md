@@ -3,6 +3,30 @@
 
 > Open this page at [https://caffebd.github.io/pxt-enemy-movement/](https://caffebd.github.io/pxt-enemy-movement/)
 
+## Usage
+
+This extensions adds blocks in sprites to quickly implement an enemy patrol route. Give your enemy sprite an x or y velocity and then use the enemy patrol blocks to set a maximum distance to move before reversing direction.
+
+Useful for platform games or RPG games where you don't simply want the enemy to bounce on the edge of the screen or off a wall.
+
+The blocks are added to the bottom of the **sprites** toolbox.
+
+* Setting Distance for X Axis
+
+```blocks
+let mySprite = sprites.create(sprites.castle.heroWalkFront1, SpriteKind.Player)
+mySprite.vx = 20
+sprites.setPatrolPathX(mySprite, 50)
+```
+
+* Setting Distance for Y Axis
+
+```blocks
+let mySprite = sprites.create(sprites.builtin.forestBat0, SpriteKind.Player)
+mySprite.vy = 20
+sprites.setPatrolPathY(mySprite, 50)
+```
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
@@ -20,12 +44,6 @@ To edit this repository in MakeCode.
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/caffebd/pxt-enemy-movement** and click import
 
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/caffebd/pxt-enemy-movement/raw/master/.github/makecode/blocks.png)
 
 #### Metadata (used for search, rendering)
 
