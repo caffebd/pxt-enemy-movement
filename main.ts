@@ -12,8 +12,16 @@ namespace sprites {
         if (!sprite) return;
         let startX = sprite.x
         let targetX = startX + value
+        sprite.setBounceOnWall(true)
         function checkXPos() {
-            if (sprite.x >= targetX || sprite.x < startX) {
+
+            if (sprite.x >= targetX) {
+                sprite.x = targetX - 1
+                let xVel = sprite.vx * -1
+                sprite.setVelocity(xVel, sprite.vy)
+            }
+            if (sprite.x < startX) {
+                sprite.x = startX
                 let xVel = sprite.vx * -1
                 sprite.setVelocity(xVel, sprite.vy)
             }
@@ -33,8 +41,15 @@ namespace sprites {
         if (!sprite) return;
         let startY = sprite.y
         let targetY = startY + value
+        sprite.setBounceOnWall(true)
         function checkYPos() {
-            if (sprite.y >= targetY || sprite.y < startY) {
+            if (sprite.y >= targetY) {
+                sprite.y = targetY-1
+                let yVel = sprite.vy * -1
+                sprite.setVelocity(sprite.vx, yVel)
+            }
+            if (sprite.y < startY) {
+                sprite.y = startY
                 let yVel = sprite.vy * -1
                 sprite.setVelocity(sprite.vx, yVel)
             }
@@ -47,4 +62,3 @@ namespace sprites {
 
 
 }
-
